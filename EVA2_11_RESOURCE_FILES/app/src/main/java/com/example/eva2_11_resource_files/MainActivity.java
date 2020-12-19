@@ -13,7 +13,6 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
 
     TextView txtVwArchivo;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,21 +23,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        //Abrir el archivo (InputStream)
-        //Leerlo en forma de bytes (InputStreamReader)
-        //Interpretarlo (Convertirlo a caracteres) (BufferedReader)
-        InputStream inputStream = getResources().openRawResource(R.raw.lorem_ipsum);
+        //Abrir el archivo InputStream
+        //Leerlo en forma de bytes InputStreamReader
+        //Interpretarlo (convertirlo a caracteres) BufferedReader
+
+        InputStream inputStream = getResources().openRawResource(R.raw.abba);
         InputStreamReader isReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(isReader);
         String sCade;
         try {
-            while ((sCade = bufferedReader.readLine()) != null) {
+            while ((sCade = bufferedReader.readLine()) != null){
                 txtVwArchivo.append(sCade);
                 txtVwArchivo.append("\n");
             }
             bufferedReader.close();
-        }catch (IOException e) {
+        }catch(IOException e){
             e.printStackTrace();
         }
+
     }
 }

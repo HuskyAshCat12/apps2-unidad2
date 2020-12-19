@@ -9,22 +9,20 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
-    Intent intent;
-    ImageView imgVwScherzo;
-
+Intent intent;
+ImageView imgViewMrCrabs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imgVwScherzo = findViewById(R.id.imgVwScherzo);
+        imgViewMrCrabs = findViewById(R.id.imgViewMrCrabs);
         intent = new Intent(this, MainActivity2.class);
     }
 
-    public void onClick(View v) {
+    public void onClick(View v){
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(
-                this, imgVwScherzo, "miTransicion");
+                this,imgViewMrCrabs,"mi_transicion"
+        );
         startActivity(intent, options.toBundle());
     }
-
 }

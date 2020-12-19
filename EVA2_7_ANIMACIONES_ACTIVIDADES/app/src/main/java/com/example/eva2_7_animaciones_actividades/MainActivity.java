@@ -15,8 +15,7 @@ Intent intent;
         intent = new Intent(this, MainActivity2.class);
     }
 
-
-    public void onClick (View v) {
+    public void onClick(View v){
         startActivity(intent);
     }
 }

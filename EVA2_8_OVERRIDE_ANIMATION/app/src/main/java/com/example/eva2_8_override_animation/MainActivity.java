@@ -15,9 +15,8 @@ Intent intent;
         intent = new Intent(this, MainActivity2.class);
     }
 
-
-    public void onClick (View v) {
-        startActivity(intent);     //Act2 der-izq         //Act1 Izq-Der
-        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+    public void onClick(View v){
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

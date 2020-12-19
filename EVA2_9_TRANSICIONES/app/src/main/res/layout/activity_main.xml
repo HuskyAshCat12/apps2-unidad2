@@ -7,20 +7,20 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imgVwScherzo"
-        android:layout_width="202dp"
-        android:layout_height="136dp"
-        android:transitionName="miTransicion"
+        android:id="@+id/imgViewMrCrabs"
+        android:layout_width="174dp"
+        android:layout_height="152dp"
+        android:transitionName="mi_transicion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/espacio" />
+        app:srcCompat="@drawable/mrcrabs" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMostrarImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="Mostar Imagen"
+        android:text="Mostrar Imagen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
